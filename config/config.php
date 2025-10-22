@@ -1,0 +1,10 @@
+<?
+define("PATH","https://website-creation.local/");
+define("ROOT",dirname(__DIR__));
+define("APP",ROOT."/app");
+define("VIEWS",ROOT."/views");
+define("CONTROLLER",APP."/controllers");
+define("MODELS",APP."/models");
+define("CONFIG",ROOT."/config");
+define("PUBLIC",ROOT."/public");
+define("COMPONENTS",VIEWS."/components");
