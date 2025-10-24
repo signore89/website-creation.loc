@@ -1,4 +1,6 @@
 <?
+session_start();
+// dd(session_id());
 
 require_once dirname(__DIR__)."/config/config.php";
 require_once MODELS."/helpers.php";

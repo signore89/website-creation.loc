@@ -18,8 +18,8 @@
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link 
-                                <?php echo($current_page =='home' || "") ? 'active' : ''; ?>" 
-                                aria-current="page" href="" >Домой</a>
+                                <?php echo($current_page == 'home.php') ? 'active' : ''; ?>" 
+                                aria-current="page" href="home.php">Домой</a>
                             </li>
 
                             <li class="nav-item">
@@ -40,7 +40,7 @@
                             
                             <li class="nav-item">
                                 <a class="nav-link
-                                <?php echo($current_page == 'page=4') ? 'active' : ''; ?>" aria-current="page" href="#" >Регистрация</a>
+                                <?php echo($current_page == 'registration.php') ? 'active' : ''; ?>" aria-current="page" href="registration.php" >Регистрация</a>
                             </li>
                         </ul>
                     </div>
@@ -48,3 +48,6 @@
             </nav>
         </header>
 
+<?echo '<pre>';
+var_dump($_SESSION);
+echo '</pre>';?>

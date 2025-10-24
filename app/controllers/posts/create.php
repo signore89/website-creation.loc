@@ -24,23 +24,22 @@ if($_SERVER['REQUEST_METHOD']== "POST"){
         ]
     ];
 
+    
+
     $validator = new Validator();
     $validation = $validator->validate($data,$rules);
+    // dd($validation->getErrors());
 
-    // if(empty($data['title'])){
-    //     $errors['title'] = "название обезательное";
-    // }
-    // if(empty($data['descr'])){
-    //     $errors['descr'] = "описание обезательное";
-    // }
-    // if(empty($data['content'])){
-    //     $errors['content'] = "содержание обезательное";
-    // }
-
-    // if(empty($errors)){
-    //     $db->query("INSERT INTO `posts`(`title`, `descr`, `content`) VALUES (?,?,?)",
-    //         [$data['title'],$data['descr'],$data['content']]);
-    // }
+    if(!$validation->hasErrors()){
+        try{
+            $db->query("INSERT INTO `posts`(`title`, `descr`, `content`) VALUES (?,?,?)",
+            [$data['title'],$data['descr'],$data['content']]);
+            $_SESSION['success'] = "Пост успешно добавлен";
+        }catch (PDOException $e){
+            $_SESSION['error'] = "Что то пошло не так" ;
+        }
+        redirect('home');
+    }
 }
 
 
