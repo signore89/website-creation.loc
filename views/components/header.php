@@ -48,6 +48,4 @@
             </nav>
         </header>
 
-<?echo '<pre>';
-var_dump($_SESSION);
-echo '</pre>';?>
+<? get_alerts()?>

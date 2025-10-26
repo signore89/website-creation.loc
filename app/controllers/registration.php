@@ -36,17 +36,17 @@ if($_SERVER['REQUEST_METHOD']== "POST"){
             $registeredUsers = $db->query("SELECT `user_id` FROM `users` WHERE `email` = ? OR `login` = ?",
             [$_POST['email'],$_POST['login']])->findAll();
             if(count($registeredUsers) > 0){
-                $_SESSION['errorRegistration'] = "Пользователь с таким email или именем уже существует";
+                $_SESSION['warning'] = "Пользователь с таким email или именем уже существует";
             }else{
                 $hash_pass = password_hash($_POST['password'],PASSWORD_DEFAULT);
                 $db->query("INSERT INTO `users` (`login`, `password`, `email`) VALUES (?, ?, ?)",
                     [$_POST['login'],$hash_pass,$_POST['email']]);
 
-                 $_SESSION['RegistartionSuccess'] = "Новый пользователь успешно добавлен";
+                 $_SESSION['success'] = "Новый пользователь успешно добавлен";
                  redirect('home.php');
             }    
         }catch(PDOException $e){
-            $_SESSION['errorRegistration'] = "Что то пошло не так ".$e->getMessage() ;
+            $_SESSION['danger'] = "Что то пошло не так ".$e->getMessage() ;
         }
     }
 }

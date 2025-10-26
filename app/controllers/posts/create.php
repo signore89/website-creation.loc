@@ -38,7 +38,7 @@ if($_SERVER['REQUEST_METHOD']== "POST"){
         }catch (PDOException $e){
             $_SESSION['error'] = "Что то пошло не так" ;
         }
-        redirect('home');
+        redirect('home.php');
     }
 }
 
