@@ -18,29 +18,32 @@
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link 
-                                <?php echo($current_page == 'home.php') ? 'active' : ''; ?>" 
-                                aria-current="page" href="home.php">Домой</a>
+                                <?php echo($current_page == 'home') ? 'active' : ''; ?>" 
+                                aria-current="page" href="home">Домой</a>
                             </li>
 
                             <li class="nav-item">
                                 <a class="nav-link
-                                <?php echo($current_page == 'page=3') ? 'active' : ''; ?>" aria-current="page" href="#" >Галерея</a>
+                                <?php echo($current_page == 'page=3') ? 'active' : ''; ?>" 
+                                aria-current="page" href="#" >Галерея</a>
                             </li>
 
                             <li class="nav-item">
                                 <a class="nav-link 
-                                <?php echo($current_page == 'create.php') ? 'active' : ''; ?>"
-                                aria-current="page" href="create.php" >Создать пост</a>
+                                <?php echo($current_page == 'create') ? 'active' : ''; ?>"
+                                aria-current="page" href="posts/create" >Создать пост</a>
                             </li>
 
                             <li class="nav-item">
                                 <a class="nav-link
-                                <?php echo($current_page == 'about.php') ? 'active' : ''; ?>" aria-current="page" href="about.php" >О нас</a>
+                                <?php echo($current_page == 'about') ? 'active' : ''; ?>" 
+                                aria-current="page" href="about" >О нас</a>
                             </li>
                             
                             <li class="nav-item">
                                 <a class="nav-link
-                                <?php echo($current_page == 'registration.php') ? 'active' : ''; ?>" aria-current="page" href="registration.php" >Регистрация</a>
+                                <?php echo($current_page == 'registration') ? 'active' : ''; ?>" 
+                                aria-current="page" href="registration" >Регистрация</a>
                             </li>
                         </ul>
                     </div>

@@ -4,7 +4,7 @@
                 <div class="col-10"> 
                     <!-- основная часть -->
                      <h3><? $header ?? ''?></h3>
-                    <form action="create.php" method="post">
+                    <form action="posts" method="POST">
                         <div class="mb-3">
                             <label for="title" class="form-label">Название поста</label>
                             <input type="text" class="form-control" id="title" name="title" value="<?=old('title')?>">
