@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-10">
             <h3><?= $header ?? '' ?></h3>
-            <form action="registration.php" method="post">
+            <form action="registration" method="post">
                         <div class="mb-3">
                             <label for="login" class="form-label">логин</label>
                             <input type="text" class="form-control" id="login" name="login">

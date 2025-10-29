@@ -1,4 +1,5 @@
 <?
+global $db;
 $title = $header = "Регистрация";
 require_once MODELS.'/Validator.php';
 
@@ -34,16 +35,16 @@ if($_SERVER['REQUEST_METHOD']== "POST"){
     if(!$validation->hasErrors()){
         try{
             $registeredUsers = $db->query("SELECT `user_id` FROM `users` WHERE `email` = ? OR `login` = ?",
-            [$_POST['email'],$_POST['login']])->findAll();
+            [$data['email'],$data['login']])->findAll();// ПЕРЕДЕЛАТЬ
             if(count($registeredUsers) > 0){
                 $_SESSION['warning'] = "Пользователь с таким email или именем уже существует";
             }else{
                 $hash_pass = password_hash($_POST['password'],PASSWORD_DEFAULT);
                 $db->query("INSERT INTO `users` (`login`, `password`, `email`) VALUES (?, ?, ?)",
-                    [$_POST['login'],$hash_pass,$_POST['email']]);
+                    [$data['login'],$hash_pass,$data['email']]);
 
                  $_SESSION['success'] = "Новый пользователь успешно добавлен";
-                 redirect('home.php');
+                 redirect('home');
             }    
         }catch(PDOException $e){
             $_SESSION['danger'] = "Что то пошло не так ".$e->getMessage() ;

@@ -1,9 +1,7 @@
 <?
 global $db;
 require_once MODELS.'/Validator.php';
-    
-    
-    // $errors = [];
+
 
     $fillable = ['title','descr','content'];
     $data = load_req_data($fillable);
@@ -28,7 +26,6 @@ require_once MODELS.'/Validator.php';
 
     $validator = new Validator();
     $validation = $validator->validate($data,$rules);
-    // dd($validation->getErrors());
 
     if(!$validation->hasErrors()){
         try{

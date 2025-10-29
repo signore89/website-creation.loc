@@ -6,6 +6,21 @@
                      <h3><? $header ?? ''?></h3>
                      <p><?= $post['descr']?></p>
                      <p><?= $post['content']?></p>
+                        <!-- изменения рейтинга -->
+                        <div id="rate-container">
+                            <button id="up_btn" class="btn btn-primary" data-post-id="<?= $post['post_id']?>">добавить рейтинг</button>
+                                <p id="rate_p"><?= $post['rate'] ?? 0 ?></p>
+                            <button id="down_btn" class="btn btn-primary" data-post-id="<?= $post['post_id']?>">убрать рейтинг</button>
+                        </div>
+                        <!-- изменить пост -->
+
+
+                        <!-- удалить пост-->
+                     <form action="posts" method="POST">
+                        <input type="hidden" name="post_id" value="<?= $post['post_id']?>">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="btn btn-danger">Удалить</button>
+                     </form>
                 </div>
                 <div class="col-2">
             
