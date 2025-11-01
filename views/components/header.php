@@ -45,6 +45,11 @@
                                 <?php echo($current_page == 'registration') ? 'active' : ''; ?>" 
                                 aria-current="page" href="registration" >Регистрация</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link
+                                <?php echo($current_page == 'login') ? 'active' : ''; ?>" 
+                                aria-current="page" href="login" >Войти</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

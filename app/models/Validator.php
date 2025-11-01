@@ -8,7 +8,7 @@
         'min' => ':fieldname: должно быть не меньше :rulevalue: символов',
         'max' => ':fieldname: должно быть не больше :rulevalue: символов',
         'email' => "Not valid email",
-        'match' => ':fieldname: поле должно соответствовать :rulevalue:'
+        'match' => ':fieldname: поле должно соответствовать :rulevalue:',
     ];
 
     public $data;
@@ -28,7 +28,7 @@
         }
         return $this;
     }
-    private function addError($fieldname,$err_mess){
+    public function addError($fieldname,$err_mess){
         $this->errors[$fieldname][] = $err_mess;
     }
 

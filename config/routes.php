@@ -12,3 +12,5 @@ $router->patch('posts',"posts/rates.php");
 $router->get('registration','registration.php');
 $router->post('registration','registration.php');
 $router->get('about','about.php');
+$router->get('login','login.php');
+$router->post('login','login.php');
