@@ -21,7 +21,11 @@
                                 </div>
                             </div>
                         </div>
-                    <? endforeach ?>
+                    <? endforeach;
+                    //нумерация
+                    for($i = 1; $i <= $pagination->pagesCount; $i++){
+                        echo "<a href='home?page=$i'>$i</a>      ";}
+                    ?>
                 </div>
                 <div class="col-2">
                     <? require_once COMPONENTS."/sidebar.php";?>

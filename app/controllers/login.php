@@ -38,7 +38,7 @@ if($_SERVER['REQUEST_METHOD']== "POST"){
                         [(int)$registeredUser])->find();
                     $flag = password_verify($data["password"], $user["password"]);
                     if ($flag){
-                        $_SESSION['success'] = "Вы вошли в личный кабинет как ".$user['name'];
+                        $_SESSION['success'] = "Вы вошли в личный кабинет как ".$user['login'];
                         redirect('home');
                     }else{
                         $validator->addError("authentication","Не верный пароль");
