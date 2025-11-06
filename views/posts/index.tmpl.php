@@ -23,8 +23,10 @@
                         </div>
                     <? endforeach;
                     //нумерация
-                    for($i = 1; $i <= $pagination->pagesCount; $i++){
-                        echo "<a href='home?page=$i'>$i</a>      ";}
+                    // for($i = 1; $i <= $pagination->pagesCount; $i++){
+                    //     echo "<a href='home?page=$i'>$i</a>      ";}
+                    //
+                    echo $pagination; 
                     ?>
                 </div>
                 <div class="col-2">
