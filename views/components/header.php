@@ -50,6 +50,11 @@
                                 <?php echo($current_page == 'login') ? 'active' : ''; ?>" 
                                 aria-current="page" href="login" >Войти</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link
+                                <?php echo($current_page == 'users') ? 'active' : ''; ?>" 
+                                aria-current="page" href="users" >Список пользователей</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

@@ -16,3 +16,8 @@ $router->post('registration','registration.php');
 $router->get('about','about.php');
 $router->get('login','login.php');
 $router->post('login','login.php');
+$router->get('users','users.php');
+$router->get('user','user_show.php');
+$router->delete('users','destroy_user.php');
+$router->get('edit-user','edit_user.php');
+$router->put('users','edit_user_confirm.php');
