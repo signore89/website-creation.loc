@@ -12,20 +12,18 @@
                                 <p id="rate_p"><?= $post['rate'] ?? 0 ?></p>
                             <button id="down_btn" class="btn btn-primary" data-post-id="<?= $post['post_id']?>">убрать рейтинг</button>
                         </div>
-                        <!-- изменить пост -->
-
-
-                        <!-- удалить пост-->
-                     <form action="posts" method="POST">
-                        <input type="hidden" name="post_id" value="<?= $post['post_id']?>">
-                        <input type="hidden" name="_method" value="DELETE">
-                        <button type="submit" class="btn btn-danger">Удалить</button>
-                     </form>
+                    <div class="row">
+                        <!-- удалить пост-->      
+                        <form action="posts" method="POST">
+                            <input type="hidden" name="post_id" value="<?= $post['post_id']?>">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn btn-danger">Удалить</button>
+                        </form>
+                        <!-- изменения поста -->
+                        <a class="btn btn-outline-warning" href="edit-post?id=<?= $post['post_id'] ?>" class="btn btn-warning">Редактировать</a>
+                    </div>
                 </div>
-                <div class="col-2">
-            
-                </div>
-             </div>          
+            </div>          
         </main>
         
         <? require_once COMPONENTS."/footer.php";?>

@@ -1,5 +1,5 @@
 <?
-class Pagination{
+class Pagination {
     public int $pagesCount = 1;
     public int $page  = 1;// текущая страница
     public int $requestPage = 1;//целевая страница

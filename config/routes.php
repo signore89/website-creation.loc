@@ -1,6 +1,8 @@
 <?
 $router->get('post','posts/show.php');
 $router->get('home','posts/index.php');
+$router->get('edit-post','posts/edit.php');
+$router->post('edit-post','posts/update.php');
 
 $router->get('posts/create','posts/create.php');
 
